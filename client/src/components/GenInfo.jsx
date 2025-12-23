@@ -50,7 +50,7 @@ const GenInfo = () => {
 
 export default GenInfo;
 
-export const Brands = () => {
+export const Brands = ({title = "Top Brands"}) => {
   const navigate = useNavigate();
 
   const data = [
@@ -61,9 +61,9 @@ export const Brands = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center my-16 w-full">
-      <p className="prose prose-2xl font-bold mb-6">Top Brands</p>
-      <div className="flex flex-wrap justify-center">
+    <div className="flex flex-col items-center w-full">
+      <div className="mt-10 mb-2 text-2xl">{title}</div>
+      <div className="flex flex-wrap justify-center mb-10">
         {data.map((elem, id) => (
           <div
             key={id}
